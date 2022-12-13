@@ -1,0 +1,33 @@
+<style>
+  #navbarDropdown:hover{
+    display: block;
+  }
+</style>
+<header>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a href="" routerLink="../employees" routerLinkActive="active" class="nav-link">Employee List</a>
+      </li>
+      <li class="nav-item">
+        <a href="" routerLink="../create-employee" routerLinkActive="active" class="nav-link">Add Employee</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav" style="margin-left: auto;">
+      <li class="nav-item" *ngIf="!user.logStatus">
+        <a href="" routerLink="login" routerLinkActive="active" class="nav-link">Login</a>
+      </li>
+
+      <li class="nav-item" *ngIf="user.logStatus">
+        <a class="nav-link">{{ user.username | titlecase }}</a>
+        <a class="nav-link" href="#" (click)="logout()">Logout</a>
+        <!--<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item disabled" href="#">My Profile</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#" (click)="logout()">Logout</a>
+        </div>-->
+      </li>
+    </ul>
+</nav>
+</header>
