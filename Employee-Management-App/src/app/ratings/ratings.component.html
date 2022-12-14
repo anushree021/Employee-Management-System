@@ -1,0 +1,41 @@
+<app-nav-header></app-nav-header>
+<div class="row">
+    <h2 class="text-center">Employee Rating & Review</h2>
+</div>
+
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Id</th>
+            <th>Rating</th>
+            <th>Review</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{ employee.firstName }}</td>
+            <td>{{ employee.lastName }}</td>
+            <td>{{ employee.emailId }}</td>
+            <td>{{ employee.rating }}/5</td>
+            <ng-container *ngFor="let rating of ratings">
+                <td *ngIf="rating.rating==employee.rating">{{ rating.review }}</td>
+            </ng-container>
+        </tr>
+    </tbody>
+</table>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Rating</th>
+            <th>Review</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rating of ratings">
+            <td>{{ rating.rating }}/5</td>
+            <td>{{ rating.review }}</td>
+        </tr>
+    </tbody>
+</table>

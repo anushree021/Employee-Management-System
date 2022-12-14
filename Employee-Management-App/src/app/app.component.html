@@ -1,0 +1,35 @@
+<style>
+  .footer{
+    background-color: #B69D74;;
+    /*position: absolute;*/
+    bottom: 0;
+    padding: 10px;
+    text-align: center;
+  }
+  h1, hr{
+    padding: 10px;
+    color: #F5F5EF;
+  }
+  body{
+    background-color: #1F2839;
+  }
+  #router-container{
+    background-color: #F5F5EF;
+  }
+</style>
+
+<html>
+  <body>
+    <h1 class="text-center">{{title}}</h1><hr>
+    <div id="router-container" class="container">
+      <router-outlet></router-outlet>
+    </div>
+    
+    <footer class="footer container-fluid">
+      <div class="container">
+        <span>{{footer}}</span>
+      </div>
+    </footer>
+  </body>
+</html>
+
