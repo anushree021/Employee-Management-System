@@ -1,1 +1,0 @@
-INSERT INTO project_manager(id, name, username, password, project_name) VALUES (1, 'Anushree Chakraborty', 'anushree', 'anushree12', 'Project-1');
